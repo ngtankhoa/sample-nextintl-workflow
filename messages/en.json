@@ -1,6 +1,11 @@
 {
   "HomePage": {
     "title": "Hello world!",
-    "about": "Go to the about page"
+    "about": "Go to the about page",
+    "dull_heroic_camel_pray": "to home page"
+  },
+  "AboutPage": {
+    "early_drab_gull_fetch": "About page",
+    "mad_formal_mayfly_clip": "Go back"
   }
 }

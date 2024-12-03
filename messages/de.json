@@ -1,6 +1,10 @@
 {
   "HomePage": {
     "title": "Hallo Welt!",
-    "about": "Gehe zur Über-Seite"
+    "about": "Gehe zur Über-Seite",
+    "dull_heroic_camel_pray": "zur Startseite"
+  },
+  "AboutPage": {
+    "early_drab_gull_fetch": "Info-Seite"
   }
 }

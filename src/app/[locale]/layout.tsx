@@ -2,7 +2,8 @@
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
-import { routing } from '@/i18n/routing'
+import { routing, Link } from '@/i18n/routing'
+import '@/app/globals.css'
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
@@ -31,7 +32,17 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>
+          <div className='min-h-40'>{children}</div>
+          <div className='flex gap-3'>
+            <Link href='/' locale='en'>
+              English
+            </Link>
+            <Link href='/' locale='de'>
+              German
+            </Link>
+          </div>
+        </NextIntlClientProvider>
       </body>
     </html>
   )
